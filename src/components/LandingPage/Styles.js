@@ -9,7 +9,7 @@ bg-[#080909]
 px-5 md:px-16 lg:px-24
 `
 const Container1 = tw.div`
-w-auto h-[90%] lg:w-full 
+w-auto h-[80%] md:h-[90%] lg:w-full 
 flex 
 justify-center items-center 
 `
@@ -20,7 +20,7 @@ justify-center items-center
 `
 const Tittle1 = tw(animated.h1)`
 w-full lg:w-full 
-font-Bungee text-[#c7ff1e7e] text-right uppercase leading-[1.5] 
+font-Bungee bg-gradient-to-r from-[#c7ff1ea0] to-[#fdf863a3] bg-clip-text text-transparent text-right uppercase leading-[1.5] 
 text-5xl min-[550px]:text-6xl sm:text-7xl md:text-5xl min-[855px]:text-[55px] lg:text-[65px] xl:text-[85px]
 my-0 transform duration-500
 `
