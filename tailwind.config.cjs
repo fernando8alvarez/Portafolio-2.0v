@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       Montserrat: ["Montserrat"],
+      Bungee: ['Bungee Outline']
     },
     extend: {
       animation: {
@@ -11,13 +12,16 @@ module.exports = {
       },
       keyframes: {
         giro: {
-          
+
           "100%": {
             transform: "rotate(180deg)",
           },
         },
       },
     },
+  },
+  corePlugins: {
+    preflight: false,
   },
   plugins: [],
 };

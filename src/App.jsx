@@ -1,11 +1,12 @@
-import LandingPage from "./components/LandingPage";
-import Navbar from "./components/Navbar";
+import LandingPage from "./components/LandingPage/LandingPage.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
 function App() {
 
   return (
-    <div className="relative">
+    <div className="w-full h-screen">
       <Navbar/>
+      <LandingPage/>
       <LandingPage/>
     </div>
   )

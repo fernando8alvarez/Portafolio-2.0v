@@ -1,5 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,800;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/*ANCHO DE LA SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /*FONDO DE LA SCROLLBAR*/
+  ::-webkit-scrollbar-track {
+    background-color: #080909;
+  }
+  
+  /*ESTILO DEL BOTON*/
+  ::-webkit-scrollbar-thumb {
+    background-color: #6f6f6f;
+    border-radius: 15px;
+  }
+  
+  /*ESTILO DEL BOTON HOVER*/
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #252322;
+  }
+
+  @media screen and (max-width: 768px) {
+    
+    ::-webkit-scrollbar {
+        width: 8px;
+      }
+  }
