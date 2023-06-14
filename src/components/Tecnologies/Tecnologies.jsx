@@ -18,7 +18,7 @@ import nodemailer from '../../imgs/nodemailer.png';
 import docker from '../../imgs/docker.png';
 import javascript from '../../imgs/javascript.png';
 import python from '../../imgs/python.png';
-import vscode from '../../imgs/vscode.png';
+// import vscode from '../../imgs/vscode.png';
 import git from '../../imgs/git.png';
 import githubLogo from '../../imgs/githubLogo.png';
 import canva from '../../imgs/canva.png';
@@ -63,7 +63,7 @@ export default function Tecnologies() {
     const tools = [
         { id: idGenerate(), name: "JavaScript", img: javascript },
         { id: idGenerate(), name: "Python", img: python },
-        { id: idGenerate(), name: "VSCode", img: vscode },
+        // { id: idGenerate(), name: "VSCode", img: vscode },
         { id: idGenerate(), name: "Git", img: git },
         { id: idGenerate(), name: "GitHub", img: githubLogo },
         { id: idGenerate(), name: "Canva", img: canva },
