@@ -32,7 +32,8 @@ md:space-x-8
 `
 
 const Options1 = tw.a`
-font-Montserrat text-[#e5e3df] hover:text-[#c5ff1e] text-sm xl:text-base
+text-${(props)=>(props.section === props.currentsection ? "[#c5ff1e]" : "[#e5e3df]")}
+font-Montserrat hover:text-[#c5ff1e] text-sm xl:text-base
 bg-transparent
 pl-3 pr-4 md:p-0  
 transform duration-500 hover:-translate-y-4 no-underline

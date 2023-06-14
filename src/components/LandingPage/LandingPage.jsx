@@ -29,9 +29,9 @@ export default function LandingPage() {
 
   //ANIMACIONES: Configuracion de cada animacion
   const animatedTittles = [
-    { name: "tittle1", x: 200, opacity: 1, delay: 1000 },
-    { name: "tittle2", x: -200, opacity: 1, delay: 500 },
-    { name: "tittle3", x: 0, opacity: 1, delay: 1500 }
+    { name: "tittle1", opacity: 1, delay: 1000 },
+    { name: "tittle2", opacity: 1, delay: 500 },
+    { name: "tittle3", opacity: 1, delay: 1500 }
 
   ]
 
@@ -41,18 +41,18 @@ export default function LandingPage() {
     { name: "icon3", y: 200, opacity: 1, delay: 1500 }
   ]
 
-  //ANIMACIONES: apliacacion de configuracion de cada animacion
+  //ANIMACIONES: aplicacion de configuracion de cada animacion
   const animated1 = animatedTittles.map((style) => {
     //Tittles
     return useSpring({
-      from: { x: style.x, opacity: 0 },
-      to: { x: 0, opacity: style.opacity },
+      from: { opacity: 0 },
+      to: { opacity: style.opacity },
       config: {
-        mass: 10,
+        mass: 40,
         tension: 2000,
         friction: 500,
       },
-      delay: style.delay,
+      delay: style.delay
     });
 
   });
@@ -72,9 +72,8 @@ export default function LandingPage() {
 
   })
 
-
   return (
-    <Section id="mainSection" >
+    <Section id="section-1" >
       <Container1>
         <ContainerTittle>
           <Tittle1 style={animated1[0]} >

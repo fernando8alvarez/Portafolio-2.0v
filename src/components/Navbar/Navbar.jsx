@@ -12,14 +12,14 @@ import {
     Options2
 } from './Styles';
 
-export default function Navbar() {
+export default function Navbar({ currentSection }) {
 
     const sections = [
-        { text: "Home", id: "mainSection" },
-        { text: "Sobre mí", id: "section2" },
-        { text: "Tecnologías", id: "section3" },
-        { text: "Proyectos", id: "section5" },
-        { text: "Contacto", id: "section6" }
+        { text: "Home", id: "section-1" },
+        { text: "Sobre mí", id: "section-2" },
+        { text: "Tecnologías", id: "section-3" },
+        { text: "Proyectos", id: "section-5" },
+        { text: "Contacto", id: "section-6" }
     ]
 
     //Menu hamburguesa
@@ -44,7 +44,7 @@ export default function Navbar() {
         config: { duration: 200 }
     })
 
-    //Activar/Desactivar el backgraund del Navbar
+    //Activar/Desactivar el background del Navbar
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -66,7 +66,7 @@ export default function Navbar() {
             window.removeEventListener("resize", handleScrollTop);
         }
 
-    }, [])
+    }, []);
 
     return (
         <Nav bg={isScrolled ? "bg-[#000000ae]" : "bg-transparent"}>
@@ -97,12 +97,19 @@ export default function Navbar() {
                         </svg>
                     </Menu>
                     <div className="hidden w-full h-fit md:flex md:w-auto" id="navbar-default">
-                        <ContainerOptions>
+                        <ContainerOptions id="navbar">
                             {
                                 sections.map((el) => {
                                     return (
-                                        <div key={idGenerate()} className='transform duration-500 hover:-translate-y-1'>
-                                            <Options1 href={`#${el.id}`}>{el.text}</Options1>
+                                        <div key={idGenerate()} 
+                                        className={`transform duration-500 hover:-translate-y-1 ${(el.id === currentSection && "-translate-y-1")}`}>
+                                            <a href={`#${el.id}`}
+                                               className={`${(el.id === currentSection ? "text-[#c5ff1e]" : "text-[#e5e3df]")}
+                                            font-Montserrat hover:text-[#c5ff1e] text-sm xl:text-base
+                                            bg-transparent
+                                            pl-3 pr-4 md:p-0  
+                                            transform duration-500 no-underline`}
+                                            >{el.text}</a>
                                         </div>
                                     )
                                 })
