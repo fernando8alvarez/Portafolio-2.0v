@@ -110,7 +110,7 @@ export default function Tecnologies() {
                 <Tittle1>Tecnologias</Tittle1>
                 <Tittle2>Habilidades</Tittle2>
             </div>
-            <div className='flex flex-col gap-10 mb-10'>
+            <div className='flex flex-col gap-5 md:gap-10 mb-10'>
                 <div>
                     <Subtittle>Frontend</Subtittle>
                     <ContainerTech>

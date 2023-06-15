@@ -123,13 +123,18 @@ export default function Navbar({ currentSection }) {
                     <div className='w-full flex flex-col gap-4 justify-center items-center'>
                         {sections.map((el) => {
                             return (
-                                <div key={idGenerate()} className="cursor-auto h-5">
-                                    <Options2
+                                <div key={idGenerate()} className="cursor-auto h-5 transform duration-500">
+                                    <a
                                         href={`#${el.id}`}
                                         onClick={() => setmenu(false)}
+                                        className={`${(el.id === currentSection ? "text-[#c5ff1e] text-base sm:text-lg" : "text-[#e5e3df]")}
+                                            font-Montserrat hover:text-[#c5ff1e] text-sm sm:text-base hover:text-base hover:sm:text-lg
+                                            bg-transparent
+                                            pl-3 pr-4 md:p-0  
+                                            transform duration-500 no-underline`}
                                     >
                                         {el.text}
-                                    </Options2>
+                                    </a>
                                 </div>
                             )
                         })}
