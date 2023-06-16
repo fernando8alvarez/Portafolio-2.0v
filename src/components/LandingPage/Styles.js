@@ -44,7 +44,7 @@ flex justify-center items-center
 gap-5
 `
 const Img = tw(animated.img)`
-md:max-w-[380px] lg:max-w-[550px] 
+md:max-w-[380px] lg:max-w-[450px] xl:max-w-[550px] 
 grayscale c
 `
 const Alert = tw.div`

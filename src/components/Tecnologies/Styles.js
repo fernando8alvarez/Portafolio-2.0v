@@ -19,8 +19,8 @@ my-0 mt-4 min-[550px]:mt-7 md:mt-12 lg:mt-16
 uppercase leading-[1.15] absolute transform duration-500
 `
 const Subtittle = tw.h2` 
-font-Montserrat text-[#e5e3df] text-base md:text-lg lg:text-xl 
-uppercase ml-10 transform duration-500
+font-Montserrat text-[#e5e3df] text-base md:text-lg lg:text-xl text-center sm:text-left
+uppercase sm:ml-10 transform duration-500
 `
 const ContainerTech = tw.div`
 bg-[#161616]
