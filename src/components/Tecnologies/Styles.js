@@ -32,12 +32,13 @@ const Alert = tw.p`
 bg-black 
 flex absolute 
 font-Montserrat text-[#e5e3df] text-[10px] sm:text-xs md:text-sm lg:text-base  
-px-2 sm:px-3 py-1 -mt-20 mb-0 
+px-2 sm:px-3 py-1 -mt-14 sm:-mt-20 mb-0 
 animate-bounce rounded-full z-10
 `
 const Img = tw.img`
 w-14 min-[550px]:w-16 md:w-20 lg:w-20 
-grayscale hover:grayscale-0 
+grayscale 
+hover:grayscale-0 
 transform duration-300
 `
 export {

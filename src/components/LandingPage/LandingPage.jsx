@@ -70,7 +70,7 @@ export default function LandingPage() {
       delay: style.delay,
     });
 
-  })
+  });
 
   return (
     <Section id="section-1" >

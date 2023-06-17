@@ -71,30 +71,24 @@ export default function Tecnologies() {
 
     ]
 
-    const [alertFront, setAlertFront] = useState({
+    const [allIcons, setAllIcons] = useState({
         CSS3: false,
-        Ract: false,
+        React: false,
         HTML5: false,
         Redux: false,
         Tailwind: false,
         SweetAlert2: false,
         Auth0: false,
-        EmailJ: false,
-        Figma: false
-    });
-
-    const [alertBack, setAlertBack] = useState({
-        CSS3: false,
-        Ract: false,
-        HTML5: false,
-        Redux: false,
-        Tailwind: false,
-        SweetAlert2: false,
-        Auth0: false,
-        EmailJ: false,
-    });
-
-    const [alertTools, setAlertTools] = useState({
+        EmailJS: false,
+        Figma: false,
+        NodeJS: false,
+        Express: false,
+        SQL: false,
+        Sequelize: false,
+        PostgreSQL: false,
+        MongoDB: false,
+        Nodemailer: false,
+        Docker: false,
         JavaScript: false,
         Python: false,
         VSCode: false,
@@ -103,6 +97,35 @@ export default function Tecnologies() {
         Canva: false
     });
 
+    const onAlert = (name) => {
+
+        const alerts = Object.keys(allIcons).reduce((acc, key) => {
+            acc[key] = false;
+            return acc;
+        }, {});
+
+        alerts[name] = true;
+        return setAllIcons(alerts);
+
+    }
+
+    const onAlert2 = (name) => {
+        let offAllalerts = Object.keys(allIcons).reduce((acc, key) => {
+            acc[key] = false;
+            return acc;
+        }, {});
+
+        return (!allIcons[name] ? setAllIcons({ ...offAllalerts, [name]: true }) : setAllIcons(offAllalerts))
+    }
+
+    const offAlerts = () => {
+        let offAllalerts = Object.keys(allIcons).reduce((acc, key) => {
+            acc[key] = false;
+            return acc;
+        }, {});
+
+        return setAllIcons(offAllalerts);
+    }
 
     return (
         <Section id="section-3">
@@ -110,7 +133,7 @@ export default function Tecnologies() {
                 <Tittle1>Tecnologias</Tittle1>
                 <Tittle2>Habilidades</Tittle2>
             </div>
-            <div className='flex flex-col gap-5 md:gap-10 mb-10'>
+            <div className='hidden md:flex flex-col gap-5 md:gap-10 mb-10'>
                 <div>
                     <Subtittle>Frontend</Subtittle>
                     <ContainerTech>
@@ -118,12 +141,12 @@ export default function Tecnologies() {
                             <div className='flex flex-col justify-center items-center '
                                 key={t.id}
                             >
-                                {alertFront[t.name] && <Alert>{t.name}</Alert>}
+                                {allIcons[t.name] && <Alert>{t.name}</Alert>}
                                 <Img
                                     src={t.img}
                                     alt="Img not found"
-                                    onMouseEnter={() => setAlertFront({ ...alertFront, [t.name]: true })}
-                                    onMouseLeave={() => setAlertFront({ ...alertFront, [t.name]: false })}
+                                    onMouseEnter={() => onAlert(t.name)}
+                                    onMouseLeave={() => offAlerts()}
                                 />
                             </div>
                         ))}
@@ -136,13 +159,14 @@ export default function Tecnologies() {
                             {techback.map((t) => (
                                 <div className='flex flex-col justify-center items-center'
                                     key={t.id}
+                                    onMouseEnter={() => onAlert(t.name)}
+                                    onMouseLeave={() => offAlerts()}
                                 >
-                                    {alertBack[t.name] && <Alert>{t.name}</Alert>}
+                                    {allIcons[t.name] && <Alert>{t.name}</Alert>}
                                     <Img
                                         src={t.img}
                                         alt="Img not found"
-                                        onMouseEnter={() => setAlertBack({ ...alertBack, [t.name]: true })}
-                                        onMouseLeave={() => setAlertBack({ ...alertBack, [t.name]: false })}
+
                                     />
                                 </div>
                             ))}
@@ -157,12 +181,86 @@ export default function Tecnologies() {
                                 <div className='flex flex-col justify-center items-center'
                                     key={t.id}
                                 >
-                                    {alertTools[t.name] && <Alert>{t.name}</Alert>}
+                                    {allIcons[t.name] && <Alert>{t.name}</Alert>}
                                     <Img
                                         src={t.img}
                                         alt="Img not found"
-                                        onMouseEnter={() => setAlertTools({ ...alertTools, [t.name]: true })}
-                                        onMouseLeave={() => setAlertTools({ ...alertBack, [t.name]: false })}
+                                        onMouseEnter={() => onAlert(t.name)}
+                                        onMouseLeave={() => offAlerts()}
+                                    />
+                                </div>
+                            ))}
+                        </ContainerTech>
+                    </div>
+                </div>
+            </div>
+            {/*PARTE MOBILE - PARTE MOBILE - PARTE MOBILE - PARTE MOBILE - PARTE MOBILE - PARTE MOBILE*/}
+            <div className='md:hidden flex flex-col  gap-5 md:gap-10 mb-10'>
+                <div>
+                    <Subtittle>Frontend</Subtittle>
+                    <ContainerTech>
+                        {techFront.map((t) => (
+                            <div className='flex flex-col justify-center items-center '
+                                key={t.id}
+                            >
+                                {allIcons[t.name] && <Alert>{t.name}</Alert>}
+                                <img
+                                    src={t.img}
+                                    alt="Img not found"
+                                    onClick={() => onAlert2(t.name)}
+                                    className={`
+                                    w-14 min-[550px]:w-16 md:w-20 lg:w-20 
+                                    ${!allIcons[t.name] && "grayscale"}
+                                    hover:grayscale-0 
+                                    transform duration-300`}
+                                />
+                            </div>
+                        ))}
+                    </ContainerTech>
+                </div>
+                <div>
+                    <Subtittle>Backend</Subtittle>
+                    <div>
+                        <ContainerTech>
+                            {techback.map((t) => (
+                                <div className='flex flex-col justify-center items-center'
+                                    key={t.id}
+                                    onClick={() => onAlert2(t.name)}
+                                >
+                                    {allIcons[t.name] && <Alert>{t.name}</Alert>}
+                                    <img
+                                        src={t.img}
+                                        alt="Img not found"
+                                        onClick={() => onAlert2(t.name)}
+                                        className={`
+                                        w-14 min-[550px]:w-16 md:w-20 lg:w-20 
+                                        ${!allIcons[t.name] && "grayscale"}
+                                        hover:grayscale-0 
+                                        transform duration-300`}
+                                    />
+                                </div>
+                            ))}
+                        </ContainerTech>
+                    </div>
+                </div>
+                <div>
+                    <Subtittle>Lenguajes y herramientas</Subtittle>
+                    <div>
+                        <ContainerTech>
+                            {tools.map((t) => (
+                                <div className='flex flex-col justify-center items-center'
+                                    key={t.id}
+                                >
+                                    {allIcons[t.name] && <Alert>{t.name}</Alert>}
+                                    <img
+                                        src={t.img}
+                                        alt="Img not found"
+                                        onClick={() => onAlert2(t.name)}
+                                        className={`
+                                        w-14 min-[550px]:w-16 md:w-20 lg:w-20 
+                                        ${!allIcons[t.name] && "grayscale" }
+                                        hover:grayscale-0 
+                                        transform duration-300`}
                                     />
                                 </div>
                             ))}
