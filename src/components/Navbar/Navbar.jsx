@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 import logo from '../../imgs/lf.png';
 import { idGenerate } from '../../helpers/index';
 import { useSpring, animated } from 'react-spring';
@@ -101,15 +102,17 @@ export default function Navbar({ currentSection }) {
                             {
                                 sections.map((el) => {
                                     return (
-                                        <div key={idGenerate()} 
-                                        className={`transform duration-500 hover:-translate-y-1 ${(el.id === currentSection && "-translate-y-1")}`}>
-                                            <a href={`#${el.id}`}
-                                               className={`${(el.id === currentSection ? "text-[#c5ff1e]" : "text-[#e5e3df]")}
+                                        <div key={idGenerate()}
+                                            className={`transform duration-500 hover:-translate-y-1 ${(el.id === currentSection && "-translate-y-1")}`}>
+                                            <Link 
+                                            to={`${el.id}`} spy={true} smooth={true} offset={-60} duration={600}
+                                            className={`${(el.id === currentSection ? "text-[#c5ff1e]" : "text-[#e5e3df]")}
                                             font-Montserrat hover:text-[#c5ff1e] text-sm xl:text-base
+                                            cursor-pointer
                                             bg-transparent
                                             pl-3 pr-4 md:p-0  
                                             transform duration-500 no-underline`}
-                                            >{el.text}</a>
+                                            >{el.text}</Link>
                                         </div>
                                     )
                                 })
@@ -124,17 +127,18 @@ export default function Navbar({ currentSection }) {
                         {sections.map((el) => {
                             return (
                                 <div key={idGenerate()} className="cursor-auto h-5 transform duration-500">
-                                    <a
-                                        href={`#${el.id}`}
+                                    <Link
+                                        
                                         onClick={() => setmenu(false)}
+                                        to={`${el.id}`} spy={true} smooth={true} offset={-60} duration={600}
                                         className={`${(el.id === currentSection ? "text-[#c5ff1e] text-base sm:text-lg" : "text-[#e5e3df] text-sm sm:text-base")}
                                             font-Montserrat hover:text-[#c5ff1e] hover:text-base hover:sm:text-lg
-                                            bg-transparent
+                                            bg-transparent cursor-pointer
                                             pl-3 pr-4 md:p-0  
                                             transform duration-500 no-underline`}
                                     >
                                         {el.text}
-                                    </a>
+                                    </Link>
                                 </div>
                             )
                         })}

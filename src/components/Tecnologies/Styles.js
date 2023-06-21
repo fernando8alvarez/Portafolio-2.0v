@@ -18,14 +18,14 @@ font-Montserrat text-[#e5e3df] font-extrabold text-2xl min-[550px]:text-3xl md:t
 my-0 mt-4 min-[550px]:mt-7 md:mt-12 lg:mt-16
 uppercase leading-[1.15] absolute transform duration-500
 `
-const Subtittle = tw.h2` 
+const Subtittle = tw(animated.h2)` 
 font-Montserrat text-[#e5e3df] text-base md:text-lg lg:text-xl text-center sm:text-left
 uppercase sm:ml-10 transform duration-500
 `
 const ContainerTech = tw.div`
 bg-[#161616]
 grid grid-cols-4 gap-3 min-[550px]:grid-cols-5 min-[550px]:gap-4 sm:grid-cols-6 lg:grid-cols-9 lg:gap-10 
-px-8 py-6 
+px-8 py-6
 rounded-xl cursor-pointer transform duration-500
 `
 const Alert = tw.p`
@@ -38,7 +38,7 @@ animate-bounce rounded-full z-10
 const Img = tw.img`
 w-14 min-[550px]:w-16 md:w-20 lg:w-20 
 grayscale 
-hover:grayscale-0 
+hover:grayscale-0
 transform duration-300
 `
 export {
