@@ -5,6 +5,7 @@ import linkedin from '../../imgs/linkedin.png';
 import github from '../../imgs/github.png';
 import cv from '../../imgs/cv.png';
 import { useSpring, animated } from 'react-spring';
+import Typed from 'typed.js';
 
 
 import {
@@ -72,6 +73,25 @@ export default function LandingPage() {
 
   });
 
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['Front-end', 'Back-end', 'Full Stack ^2000'],
+      typeSpeed: 100,
+      startDelay: 800,
+      backSpeed: 100,
+      loop: true,
+      loopCount: Infinity,
+      showCursor: false,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <Section id="section-1" >
       <Container1>
@@ -83,7 +103,7 @@ export default function LandingPage() {
             Desarrollo de aplicaciones web escalables y eficientes
           </Tittle3>
           <Tittle2 style={animated1[1]}>
-            full stack<br />web<br />developer
+            <span ref={el}></span><br />web<br />developer
           </Tittle2>
         </ContainerTittle>
         <div className="hidden md:flex" >
@@ -114,8 +134,7 @@ export default function LandingPage() {
           <Icons src={github} alt="Img not found" />
         </animated.a>
         <animated.a
-          href="http://"
-          title="CV"
+          href="#top"
           target="_blank"
           style={animated2[2]}
           className="flex flex-col items-center no-underline"
