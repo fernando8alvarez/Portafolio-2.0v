@@ -15,7 +15,7 @@ import auth0 from '../../imgs/auth0.png';
 import claudinary from '../../imgs/claudinary.png';
 import mercadoPago from '../../imgs/mercado_pago.png';
 import gestionPacientesImg from './ImgProjects/gestionPacientes.png';
-import sweetAlert from '../../imgs/sweetAlert2.png';
+import sweetAlert from '../../imgs/sweetalert2.png';
 import controlGastosImg from './ImgProjects/controlGastos.png';
 
 
