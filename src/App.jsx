@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import LandingPage from "./components/LandingPage/LandingPage.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Tecnologies from "./components/Tecnologies/Tecnologies.jsx";
+import Projects from "./components/projects/Projects.jsx";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
       <Navbar currentSection={activeSection} />
       <LandingPage />
       <Tecnologies />
+      <Projects />
     </div>
   )
 }

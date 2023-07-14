@@ -23,7 +23,7 @@ font-Montserrat text-[#e5e3df] text-base md:text-lg lg:text-xl text-center sm:te
 uppercase sm:ml-10 transform duration-500
 `
 const ContainerTech = tw.div`
-bg-[#161616]
+bg-[#101010]
 grid grid-cols-4 gap-3 min-[550px]:grid-cols-5 min-[550px]:gap-4 sm:grid-cols-6 lg:grid-cols-9 lg:gap-10 
 px-8 py-6
 rounded-xl cursor-pointer transform duration-500

@@ -7,7 +7,6 @@ import cv from '../../imgs/cv.png';
 import { useSpring, animated } from 'react-spring';
 import Typed from 'typed.js';
 
-
 import {
   Section,
   Container1,

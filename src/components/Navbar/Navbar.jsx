@@ -19,8 +19,8 @@ export default function Navbar({ currentSection }) {
         { text: "Home", id: "section-1" },
         { text: "Sobre mí", id: "section-2" },
         { text: "Tecnologías", id: "section-3" },
-        { text: "Proyectos", id: "section-5" },
-        { text: "Contacto", id: "section-6" }
+        { text: "Proyectos", id: "section-4" },
+        { text: "Contacto", id: "section-5" }
     ]
 
     //Menu hamburguesa
