@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import logo from '../../imgs/lf.png';
+import logo from '../../imgs/devfer.png';
 import { idGenerate } from '../../helpers/index';
 import { useSpring, animated } from 'react-spring';
 import {
@@ -74,7 +74,7 @@ export default function Navbar({ currentSection }) {
             <animated.div style={animatedNavbar} className=" px-10 sm:px-20 md:px-10 py-2">
                 <Container1>
                     <a href="#top" className="flex items-center">
-                        <img src={logo} className="h-10 mr-3 sm:h-12 rounded-full" alt="Logo" />
+                        <img src={logo} className="h-12 sm:h-16" alt="Logo" />
                     </a>
                     <Menu
                         data-collapse-toggle="navbar-default"
