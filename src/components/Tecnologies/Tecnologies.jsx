@@ -66,7 +66,7 @@ export default function Tecnologies() {
 
     return (
         <Section id="section-3">
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col justify-center items-center' data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="1000">
                 <Tittle1>Tecnologias</Tittle1>
                 <Tittle2>Habilidades</Tittle2>
             </div>

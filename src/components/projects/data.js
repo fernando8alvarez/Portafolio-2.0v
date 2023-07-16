@@ -18,9 +18,6 @@ import gestionPacientesImg from './ImgProjects/gestionPacientes.png';
 import sweetAlert from '../../imgs/sweetalert2.png';
 import controlGastosImg from './ImgProjects/controlGastos.png';
 
-
-
-
 const iconsTodaysRecipe = [
     { id: idGenerate(), name: "JavaScript", img: js },
     { id: idGenerate(), name: "HTML", img: html },
@@ -65,6 +62,7 @@ const summaryControlGastos = 'Esta app permite a los usuarios llevar un seguimie
 
 const todaysRecipe = {
     id: idGenerate(),
+    name: 'todaysrecipe',
     title: 'Today´s Recipes',
     summary: summaryTodaysRecipe,
     linkDemo: 'https://todays-recipe.vercel.app/',
@@ -75,6 +73,7 @@ const todaysRecipe = {
 
 const carsMarket = {
     id: idGenerate(),
+    name: 'carsmarket',
     title: 'Cars-Market',
     summary: summaryCarsMarket,
     linkDemo: 'https://carsmarket.vercel.app/',
@@ -85,6 +84,7 @@ const carsMarket = {
 
 const gestionPacientes = {
     id: idGenerate(),
+    name: 'gestionpaciente',
     title: 'Gestión de pacientes',
     summary: summaryGestionPacientes,
     linkDemo: 'https://sistema-gestion-pacientes.netlify.app/',
@@ -95,6 +95,7 @@ const gestionPacientes = {
 
 const controlGastos = {
     id: idGenerate(),
+    name: 'controlgastos',
     title: 'Control de gastos',
     summary: summaryControlGastos,
     linkDemo: 'https://sistema-control-gastos.netlify.app/',
@@ -103,4 +104,4 @@ const controlGastos = {
     img: controlGastosImg
 }
 
-export default [controlGastos, todaysRecipe, carsMarket, gestionPacientes]
+export default [controlGastos, gestionPacientes, todaysRecipe, carsMarket]
