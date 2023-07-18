@@ -19,6 +19,7 @@ import docker from '../../imgs/docker.png';
 import javascript from '../../imgs/javascript.png';
 import python from '../../imgs/python.png';
 import vscode from '../../imgs/vsCode.png';
+import webstorm from '../../imgs/webstorm.png';
 import git from '../../imgs/git.png';
 import githubLogo from '../../imgs/githubLogo.png';
 import canva from '../../imgs/canva.png';
@@ -53,6 +54,7 @@ const tools = [
     { id: idGenerate(), name: "JavaScript", img: javascript },
     { id: idGenerate(), name: "Python", img: python },
     { id: idGenerate(), name: "VSCode", img: vscode },
+    { id: idGenerate(), name: "WebStorm", img: webstorm },
     { id: idGenerate(), name: "Git", img: git },
     { id: idGenerate(), name: "GitHub", img: githubLogo },
     { id: idGenerate(), name: "Canva", img: canva },
