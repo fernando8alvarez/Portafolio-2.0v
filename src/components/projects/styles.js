@@ -6,7 +6,7 @@ w-auto h-auto
 flex flex-col 
 justify-center items-center 
 bg-[#080909] 
-px-5 md:px-16 lg:px-24 pb-20
+px-5 sm:px-20 md:px-16 lg:px-24 pb-20
 `
 
 const Title1 = tw.div`
@@ -22,7 +22,7 @@ absolute uppercase leading-[1.15] transform duration-500
 `
 const Container1 = tw.div`
 max-w-screen-lg h-full  
-flex flex-col items-center lg:flex-row gap-4
+flex flex-col items-center min-[850px]:flex-row lg:flex-row gap-4
 bg-[#101010]   
 px-4 py-4 min-[550px]:py-6 lg:px-4
 rounded-2xl
