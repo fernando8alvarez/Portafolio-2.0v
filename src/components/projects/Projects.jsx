@@ -50,7 +50,7 @@ export default function Projects() {
                 <Tittle2 >Proyectos</Tittle2>
             </div>
 
-            <div className='flex flex-col gap-6'>
+            <div className='flex flex-col justify-center items-center gap-6'>
                 {projects.map(element => (
                     <Container1 key={element.id} data-aos="fade-down" data-aos-duration="1000">
                         <div className='w-full lg:w-[55%] flex flex-col gap-4 lg:justify-between'>

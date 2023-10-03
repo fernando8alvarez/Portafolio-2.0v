@@ -21,7 +21,7 @@ my-0 mt-10 min-[550px]:mt-12 lg:mt-14
 absolute uppercase leading-[1.15] transform duration-500
 `
 const Container1 = tw.div`
-w-fit h-full  
+max-w-screen-lg h-full  
 flex flex-col items-center lg:flex-row gap-4
 bg-[#101010]   
 px-4 py-4 min-[550px]:py-6 lg:px-4

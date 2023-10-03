@@ -36,7 +36,7 @@ px-2 sm:px-3 py-1 -mt-14 sm:-mt-20 mb-0
 animate-bounce rounded-full z-10
 `
 const Img = tw.img`
-w-14 min-[550px]:w-16 md:w-20 lg:w-20 
+w-14 min-[550px]:w-16 md:w-16
 grayscale 
 hover:grayscale-0
 transform duration-300
