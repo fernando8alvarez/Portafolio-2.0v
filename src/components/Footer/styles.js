@@ -34,7 +34,7 @@ w-4 h-4 lg:w-5 lg:h-5
 
 const Link = tw.a`
 text-[#e5e3df] hover:text-[#c5ff1e] 
-m-0 no-underline 
+m-0 no-underline cursor-pointer
 transform duration-500
 `
 const Copyright = tw.p`

@@ -16,7 +16,7 @@ import {
 
 const red = {
     linkedin: {
-        name: "Linkedi",
+        name: "LinkedIn",
         link: 'https://www.linkedin.com/in/luis-fernando-a-3a5b7b151/'
     },
     github: {
@@ -55,7 +55,7 @@ export default function Footer() {
                         <Tittle>Contactos</Tittle>
                         <div className='flex gap-3 items-center m-0'>
                             <Icons src={ws} alt="Img not found" />
-                            <Link target="_blank">Whatsapp</Link>
+                            <Link target="_blank">WhatsApp</Link>
                         </div>
                         <div className='flex gap-3 items-center '>
                             <Icons src={email} alt="Img not found" />

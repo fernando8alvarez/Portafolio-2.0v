@@ -103,7 +103,6 @@ export default function Tecnologies() {
                                     <Img
                                         src={t.img}
                                         alt="Img not found"
-
                                     />
                                 </div>
                             ))}

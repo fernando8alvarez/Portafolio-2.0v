@@ -37,3 +37,7 @@ body, html {
         width: 8px;
       }
   }
+/*COLOR BARRA PROGRESO MODAL SEEWTALERT2*/
+  .swal2-popup .swal2-timer-progress-bar {
+    background-color: #c5ff1e;
+  }

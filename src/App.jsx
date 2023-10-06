@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Tecnologies from "./components/Tecnologies/Tecnologies.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
       <LandingPage />
       <Tecnologies />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   )

@@ -133,7 +133,7 @@ export default function LandingPage() {
           <Icons src={github} alt="Img not found" />
         </animated.a>
         <animated.a
-          href="#top"
+          href="https://drive.google.com/file/d/1L6o2BEq3ounH4bQJgTnnYtieDqQImCIs/view?usp=sharing"
           target="_blank"
           style={animated2[2]}
           className="flex flex-col items-center no-underline"

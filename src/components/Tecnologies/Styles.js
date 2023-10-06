@@ -26,7 +26,7 @@ const ContainerTech = tw.div`
 bg-[#101010]
 grid grid-cols-4 gap-3 min-[550px]:grid-cols-5 min-[550px]:gap-4 sm:grid-cols-6 lg:grid-cols-9 lg:gap-10 
 px-8 py-6
-rounded-xl cursor-pointer transform duration-500
+rounded-xl transform duration-500
 `
 const Alert = tw.p`
 bg-black 
@@ -37,7 +37,7 @@ animate-bounce rounded-full z-10
 `
 const Img = tw.img`
 w-14 min-[550px]:w-16 md:w-16
-grayscale 
+grayscale cursor-pointer
 hover:grayscale-0
 transform duration-300
 `
